@@ -30,6 +30,12 @@ class Planets(db.Model):
     climate = db.Column(db.String(250), nullable=False)
     population = db.Column(db.String(250), nullable=False)
     diameter = db.Column(db.String(250), nullable=False)
+    rotation_period = db.Column(db.String(250), nullable=False)
+    orbital_period = db.Column(db.String(250), nullable=False)
+    terrain = db.Column(db.String(250), nullable=False)
+
+
+
     favorites = db.relationship('Favorite', backref='planet')
 
     def __repr__(self):
